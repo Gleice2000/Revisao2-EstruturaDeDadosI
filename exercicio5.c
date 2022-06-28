@@ -1,3 +1,5 @@
+// Crie uma função recursiva para converter um valor decimal para binário utilizando recursividade.
+
 #include <stdio.h>
 
 void decBin(int n){
