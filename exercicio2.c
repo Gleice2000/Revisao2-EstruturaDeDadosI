@@ -1,0 +1,22 @@
+//Escreva uma função que verifique se uma lista encadeada que contém números inteiros está em ordem crescente(Menores no início, maiores ao fim).
+
+void inserirOrd (struct ListaSimplesEnc *pList, int v){
+	struct Nodo *novo;
+	novo = (struct Nodo*) malloc (sizeof (struct Nodo));
+	novo -> info = v;
+	
+	struct Nodo *pAtu, *pAnt;
+
+	pAnt = NULL;
+	pAtu = pList -> prim;
+
+	while ( pAtu != NULL && pAtu->info < v){
+
+		pAnt = pAtu;
+		pAtu = pAtu -> prox;
+	}
+
+	novo -> prox = pAtu -> prox;
+	pAnt -> prox = novo;
+}
+
